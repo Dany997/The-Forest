@@ -26,6 +26,7 @@ body {
   font-size: 1.5rem;
   color: #333;
   text-decoration: none;
+  z-index: 11;
 }
 .navbar__menu {
   display: flex;
@@ -82,11 +83,12 @@ body {
   position: relative;
   z-index: 2;
   color: white;
-  text-align: center;
+  text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-left: 10em;
   height: 100%;
 }
 .hero__title {
@@ -98,6 +100,118 @@ body {
   font-weight: 700;
 }
 
+.about-us {
+  padding: 2rem;
+}
+.about-us__title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #333;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.about-us__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.about-us__image {
+  width: 30%;
+  height: 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.3rem;
+}
+.about-us__text {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.7;
+  max-width: 500px;
+}
+.about-us__head {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.family-adventure {
+  position: relative;
+  height: 40vh;
+  background-image: url("../img/Girl_big.jpg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.family-adventure__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.family-adventure__content {
+  position: relative;
+  z-index: 2;
+  color: #fff;
+  text-align: center;
+}
+.family-adventure__title {
+  font-size: 2.5rem;
+  padding: 2rem 10rem;
+  border: 2px solid white;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.offer {
+  padding: 3rem;
+  text-align: center;
+}
+.offer__title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #333;
+  font-weight: 300;
+}
+.offer__subtitle {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 3rem;
+}
+.offer__cards {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+.offer__card {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(104, 102, 102, 0.774);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  height: 400px;
+}
+.offer__card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+.offer__card-title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.offer__card-text {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
 @media (max-width: 768px) {
   .navbar__menu {
     position: fixed;
@@ -105,13 +219,13 @@ body {
     left: 0;
     width: 100%;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #fff;
     display: none;
     justify-content: center;
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    z-index: 1000;
+    z-index: 10;
   }
   .navbar__menu.navbar--active__menu {
     display: flex;
@@ -129,12 +243,61 @@ body {
   }
   .navbar__link {
     font-size: 1.5rem;
+    color: #333;
   }
   .navbar__toggle {
     display: block;
     position: absolute;
     top: 1rem;
     right: 1rem;
-    z-index: 1100;
+    z-index: 11;
+  }
+  .hero {
+    background-image: url("../img/Jungle_small.jpg");
+  }
+  .hero__content {
+    padding-left: 2rem;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .hero__title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  .hero__subtitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  .about-us__content {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+  }
+  .about-us__title {
+    font-size: 2rem;
+  }
+  .about-us__image {
+    margin-bottom: 1rem;
+    width: 100%;
+    height: 100%;
+  }
+  .about-us__text-content {
+    gap: 0.5rem;
+  }
+  .about-us__head {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+  .about-us__text {
+    font-size: 1rem;
+    line-height: 1.2;
+  }
+  .family-adventure {
+    background-image: url(../img/Girl_small.jpg);
+    height: 30vh;
+  }
+  .family-adventure__title {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
   }
 }/*# sourceMappingURL=main.css.map */

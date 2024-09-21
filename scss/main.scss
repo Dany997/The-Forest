@@ -13,6 +13,7 @@ body {
 	font-family: 'Montserrat', sans-serif;
 }
 
+// ---------------NAV-----------------------
 .navbar {
 	background-color: $primary-color;
 	color: $secondary-color;
@@ -30,6 +31,7 @@ body {
 		font-size: 1.5rem;
 		color: $secondary-color;
 		text-decoration: none;
+		z-index: 11;
 	}
 
 	&__menu {
@@ -75,50 +77,187 @@ body {
 	}
 }
 
-
+// --------------------HERO-IMAGE---------------
 .hero {
 	position: relative;
 	height: 50vh; // Pełna wysokość ekranu
 	background-image: url('../img/Jungle_big.jpg'); // Ścieżka do obrazu tła
 	background-size: cover; // Dopasowanie obrazu do kontenera
 	background-position: center; // Wyśrodkowanie obrazu
-  
+
 	&__overlay {
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	  width: 100%;
-	  height: 100%;
-	  background-color: rgba(0, 0, 0, 0.712); // Czarny overlay z przezroczystością
-	  z-index: 1; // Nad tłem, pod treścią
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(
+			0,
+			0,
+			0,
+			0.712
+		); // Czarny overlay z przezroczystością
+		z-index: 1; // Nad tłem, pod treścią
 	}
-  
+
 	&__content {
-	  position: relative;
-	  z-index: 2; // Aby napisy były nad overlay
-	  color: white;
-	  text-align: center;
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: center;
-	  align-items: center;
-	  height: 100%;
+		position: relative;
+		z-index: 2; // Aby napisy były nad overlay
+		color: white;
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		padding-left: 10em;
+		height: 100%;
 	}
-  
+
 	&__title {
-	  font-size: 1.5rem;
-	  margin-bottom: 1rem;
+		font-size: 1.5rem;
+		margin-bottom: 1rem;
 	}
-  
+
 	&__subtitle {
-	  font-size: 2.5rem;
-	  font-weight: 700;
+		font-size: 2.5rem;
+		font-weight: 700;
 	}
-  }
+}
 
+// -------ABOUT----US------------------------
 
+.about-us {
+	padding: 2rem;
 
-// MEDIA QUERIES
+	&__title {
+		font-size: 3rem;
+		font-weight: 700;
+		color: $secondary-color;
+		font-weight: 400;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	&__content {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5rem;
+	}
+
+	&__image {
+		width: 30%; // Używamy rem zamiast px
+		height: 30%; // Kwadratowy obrazek
+		object-fit: cover;
+		border-radius: 0.3rem;
+	}
+
+	&__text {
+		font-size: 1.2rem;
+		color: $secondary-color;
+		line-height: 1.7;
+		max-width: 500px;
+	}
+
+	&__head {
+		font-size: 1.8rem;
+		font-weight: bold;
+		color: $secondary-color;
+	}
+}
+
+// -------FAMILY-------ADVENTURE----------------------------------
+
+.family-adventure {
+	position: relative;
+	height: 40vh; // Pełna wysokość ekranu
+	background-image: url('../img/Girl_big.jpg'); // Ścieżka do obrazka dekoracyjnego
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.5); // Przyciemniony overlay
+		z-index: 1;
+	}
+
+	&__content {
+		position: relative;
+		z-index: 2; // Treść nad overlayem
+		color: $primary-color;
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 2.5rem;
+		padding: 2rem 10rem;
+		border: 2px solid white; // Biały border wokół napisu
+		display: inline-block;
+		font-weight: 500;
+	}
+}
+
+// ----------------OFFER----------------------------
+
+.offer {
+	padding: 3rem;
+	text-align: center;
+
+	&__title {
+		font-size: 2.5rem;
+		margin-bottom: 2rem;
+		color: $secondary-color;
+		font-weight: 300;
+	}
+
+	&__subtitle {
+		font-size: 1.5rem;
+		color: $secondary-color;
+		margin-bottom: 3rem;
+	}
+
+	&__cards {
+		display: flex;
+		justify-content: center;
+		gap: 1.5rem;
+	}
+
+	&__card {
+		background-color: $primary-color;
+		padding: 2rem;
+		border-radius: 0.5rem;
+		box-shadow: 0 4px 6px rgba(104, 102, 102, 0.774);
+		transition: transform 0.3s ease, box-shadow 0.3s ease;
+		width: 300px;
+		height: 400px;
+
+		&:hover {
+			transform: scale(1.05); // Powiększenie karty
+			box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); // Większy cień
+		}
+
+		&-title {
+			font-size: 1.8rem;
+			color: $secondary-color;
+			margin-bottom: 1rem;
+			
+		}
+
+		&-text {
+			font-size: 1.2rem;
+			color: rgba(255, 255, 255, 0.8);
+		}
+	}
+}
+
+// MEDIA QUERIES-----------------------------------------------------------------
 
 @media (max-width: $breakpoint-mobile) {
 	// ----NAV-----
@@ -130,13 +269,13 @@ body {
 			left: 0;
 			width: 100%;
 			height: 100vh;
-			background-color: rgba(0, 0, 0, 0.8); // Półprzezroczyste tło
+			background-color: $primary-color;
 			display: none;
 			justify-content: center;
 			align-items: center;
 			opacity: 0; // Domyślnie niewidoczne
 			transition: opacity 0.3s ease;
-			z-index: 1000;
+			z-index: 10;
 
 			&.navbar--active__menu {
 				display: flex;
@@ -158,6 +297,7 @@ body {
 
 		&__link {
 			font-size: 1.5rem; // Większy rozmiar czcionki na urządzeniach mobilnych
+			color: $secondary-color;
 		}
 
 		&__toggle {
@@ -165,7 +305,73 @@ body {
 			position: absolute;
 			top: 1rem;
 			right: 1rem;
-			z-index: 1100; // Aby hamburger był nad menu
+			z-index: 11; // Aby hamburger był nad menu
+		}
+	}
+
+	// ---------------HERO---------------------------------
+
+	.hero {
+		background-image: url('../img/Jungle_small.jpg');
+
+		&__content {
+			padding-left: 2rem; // Zmniejszony padding na urządzeniach mobilnych
+			align-items: flex-start; // Tekst wyśrodkowany po lewej stronie
+			text-align: left; // Tekst wyrównany do lewej strony
+		}
+
+		&__title {
+			font-size: 1rem; // Zmniejszamy rozmiar tytułu
+			margin-bottom: 0.5rem; // Mniejszy odstęp pod tytułem
+		}
+
+		&__subtitle {
+			font-size: 1.2rem; // Zmniejszamy rozmiar podtytułu
+			font-weight: 700;
+		}
+	}
+
+	// --------------ABOUT------------US-------------------
+
+	.about-us {
+		&__content {
+			flex-direction: column; // Na mobile, obrazek i tekst w pionie
+			text-align: center; // Wyrównanie tekstu i obrazka na środku
+			gap: 2rem;
+		}
+
+		&__title {
+			font-size: 2rem;
+		}
+
+		&__image {
+			margin-bottom: 1rem; // Odstęp pod obrazkiem na mobile
+			width: 100%; // Używamy rem zamiast px
+			height: 100%; // Kwadratowy obrazek
+		}
+
+		&__text-content {
+			gap: 0.5rem; // Mniejszy odstęp między nagłówkiem a tekstem na mobile
+		}
+
+		&__head {
+			font-size: 1.4rem; // Zmniejszamy rozmiar nagłówka na mobile
+			margin-bottom: 0.5rem; // Mniejszy odstęp pod nagłówkiem
+		}
+
+		&__text {
+			font-size: 1rem; // Zmniejszamy rozmiar tekstu na mobile
+			line-height: 1.2;
+		}
+	}
+
+	.family-adventure {
+		background-image: url(../img/Girl_small.jpg);
+		height: 30vh;
+
+		&__title {
+			font-size: 1.5rem;
+			padding: 0.5rem 1rem;
 		}
 	}
 }
