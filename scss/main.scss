@@ -212,31 +212,31 @@ body {
 
 	&__title {
 		font-size: 2.5rem;
-		margin-bottom: 2rem;
+		margin-bottom: 1rem;
 		color: $secondary-color;
-		font-weight: 300;
+		font-weight: 500;
 	}
 
 	&__subtitle {
 		font-size: 1.5rem;
 		color: $secondary-color;
-		margin-bottom: 3rem;
+		margin-bottom: 4rem;
 	}
 
 	&__cards {
 		display: flex;
 		justify-content: center;
-		gap: 1.5rem;
+		gap: 2rem;
 	}
 
 	&__card {
 		background-color: $primary-color;
 		padding: 2rem;
 		border-radius: 0.5rem;
-		box-shadow: 0 4px 6px rgba(104, 102, 102, 0.774);
+		box-shadow: 0 4px 6px 6px rgba(180, 175, 175, 0.5);
 		transition: transform 0.3s ease, box-shadow 0.3s ease;
-		width: 300px;
-		height: 400px;
+		width: 350px;
+		height: 450px;
 
 		&:hover {
 			transform: scale(1.05); // Powiększenie karty
@@ -247,15 +247,144 @@ body {
 			font-size: 1.8rem;
 			color: $secondary-color;
 			margin-bottom: 1rem;
-			
 		}
 
-		&-text {
-			font-size: 1.2rem;
-			color: rgba(255, 255, 255, 0.8);
+		&-price {
+			font-size: 3rem;
+			font-weight: bold;
+			color: $secondary-color;
+			margin-bottom: 1rem;
+		}
+
+		&-list {
+			list-style: none;
+			padding: 0;
+			margin-bottom: 3rem;
+
+			&-item {
+				font-size: 1.2rem;
+				color: $secondary-color;
+				margin-bottom: 1.5rem;
+				position: relative;
+				padding-left: 1.5rem;
+			}
+		}
+
+		&-button {
+			background-color: $primary-color;
+			color: $secondary-color;
+			padding: 0.8rem 1.5rem;
+			width: 80%;
+			border: none;
+			box-shadow: 0 4px 6px rgba(134, 132, 132, 0.39);
+			border-radius: 0.3rem;
+			font-size: 1rem;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			margin-top: 3rem;
+
+			&:hover {
+				background-color: darken(
+					$primary-color,
+					10%
+				); // Przyciemnij przycisk po najechaniu
+			}
+		}
+
+		&-buttonCAL {
+			background-color: rgb(90, 247, 117);
+			color: $secondary-color;
+			padding: 0.8rem 1.5rem;
+			width: 80%;
+			border: none;
+			box-shadow: 0 4px 6px rgba(134, 132, 132, 0.39);
+			border-radius: 0.3rem;
+			font-size: 1rem;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+			margin-top: 3rem;
+
+			&:hover {
+				background-color: darken(
+					$primary-color,
+					10%
+				); // Przyciemnij przycisk po najechaniu
+			}
 		}
 	}
 }
+// ------FOOOTER----------------
+
+
+.footer {
+    background-color: $footer-color;
+    color: $secondary-color;
+    padding: 3rem 0;
+    font-size: 1rem;
+
+    &__container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        gap: 2rem;
+        padding: 0 2rem;
+    }
+
+    &__column {
+        flex: 1;
+
+        & p {
+            margin: 0.5rem 0;
+        }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    &__links {
+        list-style: none;
+        padding: 0;
+
+        li {
+            margin: 0.5rem 0;
+
+            a {
+                color: $secondary-color;
+                text-decoration: none;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: lighten($secondary-color, 10%);
+                }
+            }
+        }
+    }
+
+    &__socials {
+        a {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: $secondary-color;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: lighten($secondary-color, 10%);
+            }
+        }
+    }
+
+    &__bottom {
+        text-align: center;
+        margin-top: 2rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+}
+
 
 // MEDIA QUERIES-----------------------------------------------------------------
 
@@ -374,4 +503,105 @@ body {
 			padding: 0.5rem 1rem;
 		}
 	}
+
+	// ----------------OFFER----------------------------
+
+	.offer {
+		padding: 2rem 1rem; // Zmniejszamy padding po bokach
+		text-align: center;
+
+		&__title {
+			font-size: 2rem; // Zmniejszamy tytuł oferty
+			margin-bottom: 1rem;
+			color: $secondary-color;
+			font-weight: 500;
+		}
+
+		&__subtitle {
+			font-size: 1.2rem; // Zmniejszamy podtytuł
+			color: $secondary-color;
+			margin-bottom: 2rem;
+		}
+
+		&__cards {
+			display: flex;
+			flex-direction: column; // Ustawiamy karty w kolumnie na mobilu
+			justify-content: center;
+			align-items: center;
+			gap: 2rem; // Odstęp między kartami
+		}
+
+		&__card {
+			width: 100%; // Karta zajmuje pełną szerokość na mobilu
+			height: auto; // Zamiast stałej wysokości, karta dostosowuje się do treści
+			padding: 1.5rem; // Zmniejszamy padding
+
+			&:hover {
+				transform: none; // Brak skalowania karty na hover na mobilu
+				box-shadow: none; // Brak cienia na hover na mobilu
+			}
+
+			&-title {
+				font-size: 1.5rem; // Zmniejszamy rozmiar tytułu karty
+			}
+
+			&-price {
+				font-size: 2.5rem; // Zmniejszamy rozmiar ceny
+			}
+
+			&-list {
+				margin-bottom: 2rem; // Zmniejszamy margines pod listą
+
+				&-item {
+					font-size: 1rem; // Zmniejszamy rozmiar tekstu na liście
+					margin-bottom: 1rem; // Mniejszy odstęp między elementami listy
+				}
+			}
+
+			&-button,
+			&-buttonCAL {
+				padding: 0.6rem 1rem; // Mniejsze przyciski
+				width: 100%; // Pełna szerokość przycisku na mobile
+				font-size: 0.9rem; // Mniejszy rozmiar tekstu
+			}
+		}
+	}
+
+
+
+// ---------------------FOOTER-------------------------------
+
+.footer {
+	padding: 2rem 0;
+
+	&__container {
+		flex-direction: column;
+		text-align: center;
+		gap: 1rem;
+	}
+
+	&__column {
+		margin-bottom: 1rem;
+	}
+
+	&__title {
+		font-size: 1.2rem;
+	}
+
+	&__links li {
+		margin: 0.3rem 0;
+	}
+
+	&__socials {
+		a {
+			font-size: 1.3rem;
+			margin-right: 0.5rem;
+		}
+	}
+}
+
+
+
+
+
 }
