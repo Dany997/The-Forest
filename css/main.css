@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -8,6 +9,11 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+}
+
+.navbar__link.active {
+  color: #fff; /* Kolor aktywnego linku */
+  background-color: #333;
 }
 
 .navbar {
@@ -45,9 +51,27 @@ body {
   color: #333;
   text-decoration: none;
   font-size: 1.5rem;
+  display: inline-block;
+  position: relative; /* Umożliwia pozycjonowanie dla pseudo-elementu */
+  padding: 1rem; /* Dodajemy padding, aby link był bardziej przestrzenny */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Płynne przejście tła i koloru tekstu */
+  text-align: center; /* Wyrównanie tekstu */
+  /* Efekt hover */
+  /* Aby link wyglądał jak kwadrat */
 }
 .navbar__link:hover {
-  text-decoration: underline;
+  color: white; /* Zmiana koloru tekstu na biały */
+  background-color: #333; /* Tło zmienia się na czarne */
+}
+.navbar__link:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Szerokość kwadratu */
+  height: 100%; /* Wysokość kwadratu */
+  background-color: #333; /* Czarna ramka */
+  z-index: -1; /* Ustawiamy niższy z-index, aby tekst był nad kwadratem */
 }
 .navbar__toggle {
   display: none;
@@ -278,7 +302,7 @@ body {
 }
 .footer__column {
   flex: 1;
-  text-align: left;
+  text-align: right;
 }
 .footer__column p {
   margin: 0.5rem 0;
@@ -465,8 +489,10 @@ body {
   }
   .footer__title {
     font-size: 1.2rem;
+    text-align: center;
   }
   .footer__links li {
     margin: 0.3rem 0;
+    text-align: center;
   }
 }/*# sourceMappingURL=main.css.map */

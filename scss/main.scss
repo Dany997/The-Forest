@@ -14,6 +14,12 @@ body {
 }
 
 // ---------------NAV-----------------------
+
+.navbar__link.active {
+	color: $primary-color; /* Kolor aktywnego linku */
+	background-color: $secondary-color;
+}
+
 .navbar {
 	background-color: $primary-color;
 	color: $secondary-color;
@@ -54,9 +60,28 @@ body {
 		color: $secondary-color;
 		text-decoration: none;
 		font-size: 1.5rem;
+		display: inline-block;
+		position: relative; /* Umożliwia pozycjonowanie dla pseudo-elementu */
+		padding: 1rem; /* Dodajemy padding, aby link był bardziej przestrzenny */
+		transition: color 0.3s ease, background-color 0.3s ease; /* Płynne przejście tła i koloru tekstu */
+		text-align: center; /* Wyrównanie tekstu */
 
+		/* Efekt hover */
 		&:hover {
-			text-decoration: underline;
+			color: white; /* Zmiana koloru tekstu na biały */
+			background-color: $secondary-color; /* Tło zmienia się na czarne */
+		}
+
+		/* Aby link wyglądał jak kwadrat */
+		&:hover::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%; /* Szerokość kwadratu */
+			height: 100%; /* Wysokość kwadratu */
+			background-color: $secondary-color; /* Czarna ramka */
+			z-index: -1; /* Ustawiamy niższy z-index, aby tekst był nad kwadratem */
 		}
 	}
 
@@ -69,14 +94,12 @@ body {
 
 	&__icon {
 		display: block;
-
 		width: 25px;
 		height: 3px;
 		background-color: $secondary-color;
 		margin: 5px 0;
 	}
 }
-
 // --------------------HERO-IMAGE---------------
 .hero {
 	position: relative;
@@ -337,7 +360,7 @@ body {
 
 	&__column {
 		flex: 1;
-		text-align: left; // Dodane wyrównanie do prawej
+		text-align: right; // Dodane wyrównanie do prawej
 
 		& p {
 			margin: 0.5rem 0;
@@ -581,10 +604,12 @@ body {
 
 		&__title {
 			font-size: 1.2rem;
+			text-align: center;
 		}
 
 		&__links li {
 			margin: 0.3rem 0;
+			text-align: center;
 		}
 	}
 }
