@@ -21,9 +21,20 @@ body {
 }
 
 .navbar {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
 	background-color: $primary-color;
 	color: $secondary-color;
 	padding: 1.5rem;
+	z-index: 1000;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Delikatny cień */
+	transition: background-color 0.3s ease;
+
+	&.navbar--scrolled {
+		background-color: #f8f9facc; /* Zmienia kolor tła po przewinięciu */
+		box-shadow: 0 2px 6px rgba(0, 0, 0, 0.445);
+	}
 
 	&__container {
 		display: flex;
