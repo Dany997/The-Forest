@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Oferty</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<script
+			src="https://kit.fontawesome.com/1b375909b9.js"
+			crossorigin="anonymous"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<!-------------------------- NAV ----------------------------->
+
+		<header class="navbar">
+			<div class="navbar__container">
+				<a href="#" class="navbar__logo">
+					<i class="fa-solid fa-tree"></i> FOREST</a
+				>
+				<button class="navbar__toggle" aria-label="Toggle navigation">
+					<span class="navbar__icon"></span>
+					<span class="navbar__icon"></span>
+					<span class="navbar__icon"></span>
+				</button>
+				<nav class="navbar__menu">
+					<ul class="navbar__list">
+						<li class="navbar__item">
+							<a href="#home" class="navbar__link">Home</a>
+						</li>
+						<li class="navbar__item">
+							<a href="#about" class="navbar__link">O nas</a>
+						</li>
+						<li class="navbar__item">
+							<a href="#services" class="navbar__link">Usługi</a>
+						</li>
+						<li class="navbar__item">
+							<a href="#contact" class="navbar__link">Kontakt</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<!-- -----------offers -->
+
+		<div class="offers-page">
+			<section class="offers-section" id="services">
+				<h2 class="offers-section__title">Nasze Oferty</h2>
+				<div class="offers-section__cards">
+					<div class="offers-card offers-card--basic">
+						<h3 class="offers-card__title">Demo</h3>
+						<p class="offers-card__price">$0</p>
+						<ul class="offers-card__features">
+							<li class="offers-card__feature">Opcja A w pkaiecie</li>
+							<li class="offers-card__feature--disabled">
+								Opcja poza pakietem
+							</li>
+							<li class="offers-card__feature offers-card__feature--disabled">
+								Opcja C poza pakietem
+							</li>
+						</ul>
+						<button class="offers-card__button">Wybierz</button>
+					</div>
+
+					<div class="offers-card offers-card--standard">
+						<h3 class="offers-card__title">Oferta Standardowa</h3>
+						<p class="offers-card__price">$99</p>
+						<ul class="offers-card__features">
+							<li class="offers-card__feature">Opcja A</li>
+							<li class="offers-card__feature">Opcja B</li>
+							<li class="offers-card__feature--disabled">
+								Opcja C poza pakietem
+							</li>
+						</ul>
+						<button class="offers-card__button--cal">Wybierz</button>
+					</div>
+
+					<div class="offers-card offers-card--premium">
+						<h3 class="offers-card__title">Oferta Premium</h3>
+						<p class="offers-card__price">$299</p>
+						<ul class="offers-card__features">
+							<li class="offers-card__feature">Opcja A</li>
+							<li class="offers-card__feature">Opcja B</li>
+							<li class="offers-card__feature">Opcja C</li>
+						</ul>
+						<button class="offers-card__button">Wybierz</button>
+					</div>
+				</div>
+			</section>
+		</div>
+
+		<!-- FOOTER -->
+		<footer class="footer">
+			<div class="footer__container">
+				<p class="footer__logo"><i class="fa-solid fa-tree"></i> Forest</p>
+
+				<div class="footer__column">
+					<h3 class="footer__title">O Nas</h3>
+
+					<ul class="footer__links">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">O nas</a></li>
+						<li><a href="#">Usługi</a></li>
+						<li><a href="#">Kontakt</a></li>
+					</ul>
+				</div>
+				<div class="footer__column">
+					<h3 class="footer__title">Nasza Firma</h3>
+					<ul class="footer__links">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">O nas</a></li>
+						<li><a href="#">Usługi</a></li>
+						<li><a href="#">Kontakt</a></li>
+					</ul>
+				</div>
+
+				<div class="footer__column">
+					<h3 class="footer__title">Dokumenty</h3>
+					<ul class="footer__links">
+						<li><a href="#">Wnioski</a></li>
+						<li><a href="#">Rezerwacje</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer__bottom">
+				<hr class="footer-divider" />
+				<p>&copy; 2024 Forest Group. Wszystkie prawa zastrzeżone.</p>
+			</div>
+		</footer>
+
+		<script src="./script.js"></script>
+	</body>
+</html>

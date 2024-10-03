@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Kontakt - Forest</title>
+		<link rel="stylesheet" href="./css/main.css" />
+		<script
+			src="https://kit.fontawesome.com/1b375909b9.js"
+			crossorigin="anonymous"></script>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+			rel="stylesheet" />
+	</head>
+	<body>
+		<!-------------------------- NAV ----------------------------->
+
+		<header class="navbar">
+			<div class="navbar__container">
+				<a href="#" class="navbar__logo">
+					<i class="fa-solid fa-tree"></i> FOREST</a
+				>
+				<button class="navbar__toggle" aria-label="Toggle navigation">
+					<span class="navbar__icon"></span>
+					<span class="navbar__icon"></span>
+					<span class="navbar__icon"></span>
+				</button>
+				<nav class="navbar__menu">
+					<ul class="navbar__list">
+						<li class="navbar__item">
+							<a href="#home" class="navbar__link">Home</a>
+						</li>
+						<li class="navbar__item">
+							<a href="#about" class="navbar__link">O nas</a>
+						</li>
+						<li class="navbar__item">
+							<a href="#services" class="navbar__link">Usługi</a>
+						</li>
+						<li class="navbar__item">
+							<a href="#contact" class="navbar__link">Kontakt</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</header>
+
+		<main class="contact-page">
+			<!-- CONTACT-----FORM------------------ -->
+
+			<section class="contact-form">
+				<h2 class="contact-form__title">Skontaktuj się z nami!</h2>
+				<form class="contact-form__form">
+					<label for="name" class="contact-form__label"
+						><i class="fa-solid fa-user"></i> Imię i nazwisko:</label
+					>
+					<input
+						type="text"
+						id="name"
+						name="name"
+						class="contact-form__input"
+						required />
+
+					<label for="email" class="contact-form__label"
+						><i class="fa-solid fa-envelope"></i> Email:</label
+					>
+					<input
+						type="email"
+						id="email"
+						name="email"
+						class="contact-form__input"
+						required />
+
+					<label for="message" class="contact-form__label">
+						<i class="fa-solid fa-message"></i> Wiadomość:</label
+					>
+					<textarea
+						id="message"
+						name="message"
+						class="contact-form__textarea"
+						rows="4"
+						required></textarea>
+
+					<button type="submit" class="contact-form__button">Wyślij</button>
+				</form>
+			</section>
+
+			<!-- --------MAP-SECTION------------------- -->
+
+			<section class="map">
+				<h2 class="map__title">Nasza lokalizacja</h2>
+				<div id="map" class="map__container">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2559.8469391237304!2d19.892171476925398!3d50.08915251331179!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165a326d015c3b%3A0x47a12cd367a1f34e!2sRestauracja%20McDonald&#39;s!5e0!3m2!1spl!2spl!4v1727964110865!5m2!1spl!2spl"
+						width="600"
+						height="450"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+						referrerpolicy="no-referrer-when-downgrade"></iframe>
+				</div>
+			</section>
+		</main>
+
+		<!-- FOOTER -->
+		<footer class="footer">
+			<div class="footer__container">
+				<p class="footer__logo"><i class="fa-solid fa-tree"></i> Forest</p>
+
+				<div class="footer__column">
+					<h3 class="footer__title">O Nas</h3>
+
+					<ul class="footer__links">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">O nas</a></li>
+						<li><a href="#">Usługi</a></li>
+						<li><a href="#">Kontakt</a></li>
+					</ul>
+				</div>
+				<div class="footer__column">
+					<h3 class="footer__title">Nasza Firma</h3>
+					<ul class="footer__links">
+						<li><a href="#">Home</a></li>
+						<li><a href="#">O nas</a></li>
+						<li><a href="#">Usługi</a></li>
+						<li><a href="#">Kontakt</a></li>
+					</ul>
+				</div>
+
+				<div class="footer__column">
+					<h3 class="footer__title">Dokumenty</h3>
+					<ul class="footer__links">
+						<li><a href="#">Wnioski</a></li>
+						<li><a href="#">Rezerwacje</a></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="footer__bottom">
+				<hr class="footer-divider" />
+				<p>&copy; 2024 Forest Group. Wszystkie prawa zastrzeżone.</p>
+			</div>
+		</footer>
+
+		<script src="./script.js"></script>
+	</body>
+</html>
