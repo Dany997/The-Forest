@@ -294,6 +294,22 @@ body {
 .offer__card-buttonCAL:hover {
   background-color: #e6e6e6;
 }
+.offer__pageButton {
+  display: inline-block;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 4px 6px rgba(134, 132, 132, 0.39);
+  padding: 1rem 3rem;
+  text-decoration: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 4rem;
+}
+.offer__pageButton:hover {
+  background-color: #e6e6e6;
+}
 
 .footer {
   background-color: rgba(168, 163, 163, 0.096);

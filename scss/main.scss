@@ -350,6 +350,25 @@ body {
 			}
 		}
 	}
+
+	&__pageButton {
+		display: inline-block;
+		background-color: $primary-color;
+		color: $secondary-color;
+		box-shadow: 0 4px 6px rgba(134, 132, 132, 0.39);
+
+		padding: 1rem 3rem;
+		text-decoration: none;
+		border-radius: 1rem;
+		font-size: 1rem;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
+		margin-top: 4rem;
+
+		&:hover {
+			background-color: darken($primary-color, 10%);
+		}
+	}
 }
 // ------FOOOTER----------------
 
