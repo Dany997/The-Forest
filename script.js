@@ -3,13 +3,23 @@ document.addEventListener('DOMContentLoaded', function () {
 	const menu = document.querySelector('.navbar__menu');
 	const body = document.body;
 	const navbar = document.querySelector('.navbar');
+	const navLinks = document.querySelectorAll('.navbar__link'); // Pobieramy wszystkie linki w menu
 
 	const handleNav = () => {
-		menu.classList.toggle('navbar--active__menu'); // Pokazuje menu
+		menu.classList.toggle('navbar--active__menu'); // Pokazuje/ukrywa menu
 		body.classList.toggle('navbar--active'); // Zablokowanie przewijania strony
 	};
 
 	toggleButton.addEventListener('click', handleNav);
+
+	// Zamykanie menu po kliknięciu w link nawigacyjny
+	navLinks.forEach((link) => {
+		link.addEventListener('click', () => {
+			// Ukryj menu po kliknięciu w link
+			menu.classList.remove('navbar--active__menu');
+			body.classList.remove('navbar--active');
+		});
+	});
 
 	// Dodanie obsługi "scroll" dla sticky effect
 	window.addEventListener('scroll', function () {
@@ -23,7 +33,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		// Obsługa aktywnych linków nawigacyjnych
 		let sections = document.querySelectorAll('section');
-		let navLinks = document.querySelectorAll('.navbar__link');
 
 		sections.forEach((section) => {
 			let sectionHeight = section.offsetHeight;
